@@ -2,32 +2,23 @@
   const tg = 'https://t.me/Must1ofa1';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) {
-    document.querySelectorAll('img[data-static-src]').forEach(img => {
-      img.src = img.dataset.staticSrc;
-    });
-  }
-  if (reduceMotion) {
-    document.querySelectorAll('.intro__dna-video, .dna-stage__video').forEach(video => {
+    document.querySelectorAll('video').forEach(video => {
       try { video.pause(); } catch (_) {}
       video.removeAttribute('autoplay');
     });
   }
-  if (reduceMotion) { document.querySelectorAll('.section-motion').forEach(video => { try { video.pause(); } catch (_) {} }); }
   const intro = document.getElementById('intro');
   const skipIntro = document.getElementById('skipIntro');
-  const hasSeenIntro = sessionStorage.getItem('mustafa-intro-seen-v4') === '1';
-  const compactViewport = window.matchMedia('(max-width: 760px)').matches;
 
   const closeIntro = () => {
     if (!intro) return;
     intro.classList.add('is-hidden');
-    sessionStorage.setItem('mustafa-intro-seen-v4', '1');
   };
 
-  if (reduceMotion || hasSeenIntro || compactViewport) {
+  if (reduceMotion) {
     intro?.classList.add('is-hidden');
   } else {
-    window.setTimeout(closeIntro, 3000);
+    window.setTimeout(closeIntro, 2800);
   }
 
   skipIntro?.addEventListener('click', closeIntro);
@@ -40,23 +31,7 @@
   });
   nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('nav--open'); menu?.setAttribute('aria-expanded','false'); }));
 
-  document.querySelectorAll('.mobile-more-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const section = button.closest('section');
-      const expanded = section?.classList.toggle('mobile-expanded') || false;
-      button.setAttribute('aria-expanded', String(expanded));
-      button.textContent = expanded ? 'Свернуть' : (button.dataset.closedLabel || button.textContent);
-      if (!button.dataset.closedLabel && !expanded) button.dataset.closedLabel = button.textContent;
-    });
-    button.dataset.closedLabel = button.textContent;
-  });
-
   const heroVisual = document.getElementById('heroVisual');
-  const reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    const io = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); } }), { threshold: .12, rootMargin: '0px 0px -40px' });
-    reveals.forEach(el => io.observe(el));
-  } else reveals.forEach(el => el.classList.add('is-visible'));
 
   if (heroVisual && !reduceMotion) {
     let raf = 0;
@@ -73,8 +48,11 @@
 
   const leadForm = document.getElementById('leadForm');
   const status = document.getElementById('formStatus');
+  const submitButton = document.getElementById('submitButton');
   leadForm?.addEventListener('submit', async e => {
     e.preventDefault();
+    if (!leadForm.reportValidity()) return;
+    if (submitButton) { submitButton.disabled = true; submitButton.textContent = 'Подготавливаю запрос…'; }
     const fd = new FormData(leadForm);
     const message = [
       'Здравствуйте! Хочу получить бесплатный персональный подбор.',
@@ -85,7 +63,14 @@
       `Что принимаю сейчас: ${fd.get('current') || '—'}`,
       `Мой Telegram: ${fd.get('telegram') || '—'}`
     ].join('\n');
-    try { await navigator.clipboard.writeText(message); if (status) status.hidden = false; } catch (_) { if (status) { status.textContent = 'Откройте Telegram и отправьте Мустафе свой запрос.'; status.hidden = false; } }
-    window.open(tg, '_blank', 'noopener,noreferrer');
+    const telegramWindow = window.open(`${tg}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    try {
+      await navigator.clipboard.writeText(message);
+      if (status) { status.textContent = 'Запрос подготовлен. Проверьте текст и отправьте его в открывшемся чате Telegram.'; status.hidden = false; }
+    } catch (_) {
+      if (status) { status.textContent = 'Откройте Telegram и отправьте Мустафе свой запрос.'; status.hidden = false; }
+    }
+    if (!telegramWindow) window.location.href = `${tg}?text=${encodeURIComponent(message)}`;
+    if (submitButton) { submitButton.disabled = false; submitButton.textContent = 'Отправить запрос в Telegram'; }
   });
 })();

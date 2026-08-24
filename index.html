@@ -3,204 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#07070b">
-  <meta name="description" content="Персональный подход к энергии, сну, восстановлению и продуктивности. Бесплатный подбор продуктов и персональный биохакинг-разбор.">
+  <meta name="theme-color" content="#07060a">
+  <meta name="description" content="Персональный подход к энергии, сну, восстановлению и продуктивности.">
   <meta property="og:title" content="MUSTAFA — персональный биохакинг">
-  <meta property="og:description" content="Сон, энергия, концентрация, восстановление и продуктивность — через персональный подход.">
+  <meta property="og:description" content="Сон, энергия, концентрация и восстановление через персональный подход.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/dna.jpg">
-  <meta name="twitter:card" content="summary_large_image">
   <title>MUSTAFA — персональный биохакинг</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
-
   <div class="intro" id="intro" aria-hidden="true">
-    <div class="intro__noise"></div>
-    <div class="intro__media intro-dna-stage">
-      <video class="intro__dna-flow intro__dna-video" autoplay muted loop playsinline preload="auto" poster="assets/images/dna-flow-poster.webp" aria-hidden="true">
-        <source src="assets/video/dna-flow.webm" type="video/webm">
-      </video>
-    </div>
-    <div class="intro__word brand-display">MUSTAFA <small>PERSONAL BIOHACKING</small></div>
+    <div class="intro__light"></div>
+    <div class="intro__media"><video class="intro__video" autoplay muted loop playsinline preload="auto" poster="assets/images/dna-flow-poster.webp"><source src="assets/video/dna-flow.webm" type="video/webm"></video></div>
+    <div class="intro__word">MUSTAFA</div>
     <button class="intro__skip" id="skipIntro" type="button">Пропустить</button>
   </div>
-
   <header class="header" id="header">
-    <a class="brand brand-display" href="#top" aria-label="MUSTAFA — на главную">MUSTAFA <span>PERSONAL BIOHACKING</span></a>
-    <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="#goals">Направления</a><a href="#selection">Подбор</a><a href="#review">Разбор</a><a href="#about">О Мустафе</a><a href="#faq">FAQ</a>
-    </nav>
+    <a class="brand" href="#top" aria-label="MUSTAFA — на главную">MUSTAFA</a>
+    <nav class="nav" id="nav" aria-label="Основная навигация"><a href="#system">Подход</a><a href="#goals">Направления</a><a href="#selection">Подбор</a><a href="#process">Процесс</a><a href="#about">О Мустафе</a><a href="#faq">FAQ</a></nav>
     <a class="header__cta" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
     <button class="menu" id="menu" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
   </header>
-
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero__glow hero__glow--a"></div><div class="hero__glow hero__glow--b"></div>
-      <div class="hero__content reveal">
-        <p class="eyebrow">PERSONAL BIOHACKING • BY MUSTAFA</p>
-        <h1>Персональный биохакинг <em>под ваши цели</em></h1>
-        <p class="hero__lead">Помогаю выстроить систему сна, энергии и восстановления с учётом вашего образа жизни.</p>
-        <div class="actions hero__actions"><a class="button button--primary" href="#selection">Получить бесплатный подбор</a><a class="hero__secondary" href="#review">Нужен персональный разбор <span>→</span></a></div>
-      </div>
-      <div class="hero__visual dna-stage" id="heroVisual">
-        <div class="dna-stage__ambient" aria-hidden="true"></div>
-        <video class="dna-stage__asset dna-stage__video" autoplay muted loop playsinline preload="auto" poster="assets/images/dna-flow-poster.webp" aria-label="Стеклянная анимированная спираль ДНК">
-          <source src="assets/video/dna-flow.webm" type="video/webm">
-        </video>
-      </div>
-      <a class="scrollhint" href="#goals">SCROLL <span>↓</span></a>
+      <div class="hero__visual" id="heroVisual" aria-hidden="true"><video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/images/dna-flow-poster.webp"><source src="assets/video/dna-flow.webm" type="video/webm"></video></div>
+      <div class="hero__content shell"><p class="eyebrow">PERSONAL BIOHACKING · BY MUSTAFA</p><h1 class="hero-title">Персональный<br>биохакинг<br><em>под ваши цели</em></h1><p class="hero__lead">Помогаю выстроить систему сна, энергии и восстановления с учётом вашего образа жизни.</p><div class="hero__actions"><a class="button button--primary" href="#selection">Получить бесплатный подбор</a><a class="text-action" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Персональный разбор <span>→</span></a></div></div>
     </section>
 
-    <section id="goals" class="section section--quiet">
-      <div class="section-head reveal"><p class="eyebrow">НАПРАВЛЕНИЯ</p><h2>С чем можно работать</h2><p>Не ищите идеальную категорию. Выберите то, что сейчас ближе всего к вашему запросу.</p></div>
-      <div class="goal-grid">
-        <article class="goal-card reveal"><span>01</span><h3>Энергия и ресурс</h3><p>Когда хочется меньше уставать и стабильнее чувствовать себя в течение дня.</p></article>
-        <article class="goal-card reveal"><span>02</span><h3>Сон и восстановление</h3><p>Когда важно улучшить режим, качество отдыха и восстановление после нагрузок.</p></article>
-        <article class="goal-card reveal"><span>03</span><h3>Фокус и продуктивность</h3><p>Когда сложно долго концентрироваться, сохранять ясность и рабочий темп.</p></article>
-        <article class="goal-card reveal"><span>04</span><h3>Стресс и адаптация</h3><p>Когда высокая нагрузка, напряжение и ритм жизни начинают заметно влиять на состояние.</p></article>
-        <article class="goal-card reveal"><span>05</span><h3>Форма и самочувствие</h3><p>Когда хочется системнее подойти к питанию, активности, весу и ежедневным привычкам.</p></article>
-        <article class="goal-card reveal"><span>06</span><h3>Кожа и волосы</h3><p>Когда хочется комплексно посмотреть на питание, привычки и общий контекст.</p></article>
-        <article class="goal-card reveal"><span>07</span><h3>Общее состояние</h3><p>Когда нет одной конкретной задачи и хочется посмотреть на ситуацию целиком.</p></article>
-      </div>
-      <button class="mobile-more-toggle" type="button" aria-expanded="false">Показать ещё 3 направления</button>
-      <a class="text-link" href="#selection">Рассказать о своей цели →</a>
+    <section class="media-section media-section--heart" id="system">
+      <div class="section-visual section-visual--heart" aria-hidden="true"><video class="section-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/human-system-poster.webp"><source src="assets/video/human-system.mp4" type="video/mp4"></video></div>
+      <div class="section-copy shell"><p class="eyebrow">SYSTEM THINKING</p><h2>Не начинаем с банок.<br><em>Начинаем с человека.</em></h2><p>У двух людей может быть похожий запрос, но совершенно разный режим, уровень нагрузки, привычки и цели. Поэтому персональный подход начинается с понимания контекста.</p><p>И только после этого можно говорить о том, какие инструменты действительно стоит рассматривать.</p></div>
     </section>
 
-    <section class="section human-first">
-      <div class="human-first__visual reveal">
-        <div class="integrated-media integrated-media--human" aria-hidden="true">
-          <div class="integrated-media__glow"></div>
-          <video class="integrated-media__video section-motion" autoplay muted loop playsinline preload="metadata">
-            <source src="assets/video/human-system.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="human-first__copy reveal"><p class="eyebrow">SYSTEM THINKING</p><h2>Не начинаем с банок.<br><em>Начинаем с человека.</em></h2><p>У двух людей может быть похожий запрос, но совершенно разный режим, уровень нагрузки, привычки и цели. Поэтому персональный подход начинается с понимания контекста.</p><p>И только после этого можно говорить о том, какие инструменты действительно стоит рассматривать.</p></div>
-    </section>
+    <section id="goals" class="section goals"><div class="shell"><div class="section-head"><p class="eyebrow">НАПРАВЛЕНИЯ</p><h2>С чем можно работать</h2><p>Не ищите идеальную категорию.<br>Выберите то, что сейчас ближе всего к вашему запросу.</p></div><div class="goal-grid">
+      <article class="goal-card"><span>01</span><h3>Энергия и ресурс</h3><p>Когда хочется меньше уставать и стабильнее чувствовать себя в течение дня.</p></article>
+      <article class="goal-card"><span>02</span><h3>Сон и восстановление</h3><p>Когда важно улучшить режим, качество отдыха и восстановление после нагрузок.</p></article>
+      <article class="goal-card"><span>03</span><h3>Фокус и продуктивность</h3><p>Когда сложно долго концентрироваться, сохранять ясность и рабочий темп.</p></article>
+      <article class="goal-card"><span>04</span><h3>Стресс и адаптация</h3><p>Когда высокая нагрузка и напряжённый ритм заметно влияют на состояние.</p></article>
+      <article class="goal-card"><span>05</span><h3>Форма и самочувствие</h3><p>Когда хочется системнее подойти к питанию, активности, весу и привычкам.</p></article>
+      <article class="goal-card"><span>06</span><h3>Кожа и волосы</h3><p>Когда хочется комплексно посмотреть на питание, привычки и общий контекст.</p></article>
+      <article class="goal-card"><span>07</span><h3>Общее состояние</h3><p>Когда нет одной конкретной задачи и хочется посмотреть на ситуацию целиком.</p></article>
+    </div></div></section>
 
-    <section id="selection" class="section selection">
-      <div class="reveal"><div class="section-head"><p class="eyebrow">FREE SELECTION</p><h2>Не знаете, что выбрать?</h2><p>Расскажите о своей ситуации — запрос станет отправной точкой для персонального подбора продуктов.</p></div><div class="selection-points"><span>01 / цель</span><span>02 / контекст</span><span>03 / текущие продукты</span><span>04 / подбор</span></div><p class="legal-note">Подбор носит информационно-рекомендательный характер и не является медицинской диагностикой или назначением лечения.</p></div>
-      <form class="lead-form reveal" id="leadForm" aria-describedby="form-note">
-        <div class="form-grid"><label>Имя<input name="name" autocomplete="name" required></label><label>Возраст<input name="age" inputmode="numeric" pattern="[0-9]{2,3}"></label></div>
+    <section id="selection" class="section selection"><div class="shell selection__grid"><div class="selection__intro"><p class="eyebrow">FREE SELECTION</p><h2>Не знаете,<br>что выбрать?</h2><p>Расскажите о своей ситуации. Запрос станет отправной точкой для персонального подбора продуктов.</p><p class="legal-note">Подбор носит информационно-рекомендательный характер и не является медицинской диагностикой или назначением лечения.</p></div>
+      <form class="lead-form" id="leadForm" aria-describedby="form-note">
+        <div class="form-row"><label>Имя<input name="name" autocomplete="name" required></label><label>Возраст<input name="age" inputmode="numeric" pattern="[0-9]{2,3}"></label></div>
         <label>Что хотите улучшить?<select name="goal"><option>Энергия и ресурс</option><option>Сон и восстановление</option><option>Фокус и продуктивность</option><option>Стресс и адаптация</option><option>Форма и самочувствие</option><option>Кожа и волосы</option><option>Общее состояние</option></select></label>
         <label>Что беспокоит сейчас?<textarea name="situation" rows="4" placeholder="Опишите ситуацию своими словами" required></textarea></label>
         <label>Что вы уже принимаете?<textarea name="current" rows="3" placeholder="Добавки и другие продукты, если есть"></textarea></label>
-        <label>Ваш Telegram<input name="telegram" placeholder="@username" autocomplete="off"></label>
-        <label class="checkbox"><input type="checkbox" required><span>Я согласен(а) с <a href="privacy.html">политикой конфиденциальности</a> и обработкой данных для ответа на мой запрос.</span></label>
-        <p id="form-note" class="legal-note">Не отправляйте через форму медицинские документы и лишние чувствительные данные. Вопросы диагностики, лечения и совместимости с назначенной терапией обсуждаются с врачом.</p>
-        <button class="button button--primary" type="submit">Открыть Telegram <span>↗</span></button>
-        <p class="success" id="formStatus" role="status" hidden>Текст заявки скопирован. Вставьте его в чат с @Must1ofa1.</p>
+        <label>Ваш Telegram<input name="telegram" placeholder="@username" autocomplete="off" required></label>
+        <label class="checkbox"><input type="checkbox" required><span>Я согласен(а) с <a href="privacy.html">политикой конфиденциальности</a> и обработкой данных для ответа на запрос.</span></label>
+        <p id="form-note" class="legal-note form-note">Не отправляйте медицинские документы и лишние чувствительные данные.</p>
+        <button class="button button--primary" id="submitButton" type="submit">Отправить запрос в Telegram</button><p class="success" id="formStatus" role="status" hidden></p>
       </form>
+    </div></section>
+
+    <section class="media-section media-section--brain" id="assessment">
+      <div class="section-visual section-visual--brain" aria-hidden="true"><video class="section-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/neuro-brain-poster.webp"><source src="assets/video/neuro-brain.mp4" type="video/mp4"></video></div>
+      <div class="section-copy shell"><p class="eyebrow">SELF-ASSESSMENT</p><h2>Узнайте свой<br><em><span class="no-break">нейромедиаторный</span> профиль</em></h2><p>Пройдите тест Бравермана и получите ориентировочный профиль четырёх систем. Результат можно использовать как дополнительную информацию при персональном разборе.</p><a class="button button--primary" href="https://psytests.org/typo/bna-run.html" target="_blank" rel="noopener noreferrer">Пройти тест ↗</a><p class="legal-note">Тест является инструментом самооценки и не измеряет уровень нейромедиаторов лабораторно. Результаты не являются медицинской диагностикой.</p></div>
     </section>
 
-    <section class="section neuro">
-      <div class="neuro__visual reveal">
-        <div class="integrated-media integrated-media--brain" aria-hidden="true">
-          <div class="integrated-media__glow"></div>
-          <video class="integrated-media__video section-motion" autoplay muted loop playsinline preload="metadata">
-            <source src="assets/video/neuro-brain.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="neuro__copy reveal"><p class="eyebrow">SELF-ASSESSMENT</p><h2>Узнайте свой <em><span class="no-break">нейромедиаторный</span> профиль</em></h2><p>Пройдите тест Бравермана и получите ориентировочный профиль четырёх систем. Результат можно использовать как дополнительную информацию при персональном разборе.</p><div class="actions"><a class="button button--primary" href="https://psytests.org/typo/bna-run.html" target="_blank" rel="noopener noreferrer">Пройти тест ↗</a><a class="button button--secondary" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Отправить результат ↗</a></div><p class="legal-note">Тест является инструментом самооценки и не измеряет уровень нейромедиаторов лабораторно. Результаты не являются медицинской диагностикой.</p></div>
-    </section>
+    <section class="section process" id="process"><div class="shell process__grid"><div class="section-head"><p class="eyebrow">PROCESS</p><h2>Как проходит работа</h2></div><div class="timeline">
+      <article><span>01</span><h3>Запрос</h3><p>Вы рассказываете, что хотите улучшить.</p></article>
+      <article><span>02</span><h3>Контекст</h3><p>Рассматриваются режим, привычки, нагрузка и текущая ситуация.</p></article>
+      <article><span>03</span><h3>Стратегия</h3><p>Определяем приоритеты и подход.</p></article>
+    </div></div></section>
 
-    <section id="review" class="section review"><div class="review__panel reveal"><p class="eyebrow">DEEPER WORK</p><h2>Когда одного подбора <em>недостаточно</em></h2><div class="compare"><article><small>Бесплатный подбор</small><h3>«Какие продукты можно рассмотреть под мою цель?»</h3><p>Фокус на конкретном запросе и выборе продуктов.</p></article><article class="compare__accent"><small>Персональный разбор</small><h3>«На что мне стоит обратить внимание в образе жизни?»</h3><p>Более широкий взгляд на режим, питание, нагрузку, восстановление, привычки и цели.</p></article></div><a class="button button--primary" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Запросить персональный разбор <span>↗</span></a></div></section>
+    <section class="section products" id="products"><div class="shell"><div class="section-head"><p class="eyebrow">PERSONAL STACK</p><h2>Инструменты под конкретные цели</h2><p>Продукты рассматриваются как часть общей системы, а не как универсальное решение для каждого.</p></div><div class="product-grid">
+      <article class="product-category"><div class="product-category__head"><span>01</span><h3>Сон и восстановление</h3></div><div class="product-list"><div class="product-item"><div class="product-visual"><img src="assets/images/products/magnesium-glycinate.webp" loading="lazy" alt="Магний глицинат Triple H"></div><div><strong>Магний глицинат</strong><small>Биодоступная форма магния для индивидуальных подборок и вечерних рутин.</small></div></div><div class="product-item"><div class="product-visual"><img src="assets/images/products/glycine.webp" loading="lazy" alt="Глицин Triple H"></div><div><strong>Глицин</strong><small>Аминокислота, которая может входить в подбор в зависимости от целей.</small></div></div></div></article>
+      <article class="product-category"><div class="product-category__head"><span>02</span><h3>Энергия и ресурс</h3></div><div class="product-list"><div class="product-item"><div class="product-visual"><img src="assets/images/products/creatine.webp" loading="lazy" alt="Креатин моногидрат Triple H"></div><div><strong>Креатин моногидрат</strong><small>Может рассматриваться при задачах, связанных с нагрузкой и восстановлением.</small></div></div><div class="product-item"><div class="product-visual"><img src="assets/images/products/taurine.webp" loading="lazy" alt="Таурин Triple H"></div><div><strong>Таурин</strong><small>Может включаться в персональный stack с учётом уровня нагрузки.</small></div></div></div></article>
+      <article class="product-category"><div class="product-category__head"><span>03</span><h3>Фокус и продуктивность</h3></div><div class="product-list"><div class="product-item"><div class="product-visual"><img src="assets/images/products/magnesium-threonate.webp" loading="lazy" alt="Магний L-треонат Triple H"></div><div><strong>Магний L‑треонат</strong><small>Форма магния для подборок при высокой интеллектуальной нагрузке.</small></div></div></div></article>
+      <article class="product-category"><div class="product-category__head"><span>04</span><h3>Стресс и адаптация</h3></div><div class="product-list"><div class="product-item"><div class="product-visual"><img src="assets/images/products/ashwagandha.webp" loading="lazy" alt="Ашваганда Triple H"></div><div><strong>Ашваганда</strong><small>Растительный экстракт для индивидуальных подборок при высокой нагрузке.</small></div></div></div></article>
+      <article class="product-category"><div class="product-category__head"><span>05</span><h3>Витамины и минералы</h3></div><div class="product-list"><div class="product-item"><div class="product-visual"><img src="assets/images/products/zinc-selen.webp" loading="lazy" alt="Цинк и селен Triple H"></div><div><strong>Цинк + Селен</strong><small>Комплекс, который может входить в подбор с учётом рациона и контекста.</small></div></div></div></article>
+    </div><p class="product-disclaimer">Подборка показана для наглядности. Конкретный состав и выбор продуктов определяются индивидуально с учётом цели, образа жизни и общего контекста.</p></div></section>
 
-    <section class="section process"><div class="section-head reveal"><p class="eyebrow">PROCESS</p><h2>Как проходит работа</h2></div><div class="timeline"><article class="reveal"><span>01</span><div><h3>Запрос</h3><p>Вы рассказываете, что хотите улучшить.</p></div></article><article class="reveal"><span>02</span><div><h3>Контекст</h3><p>Рассматриваются режим, привычки, нагрузка и текущая ситуация.</p></div></article><article class="reveal"><span>03</span><div><h3>Стратегия</h3><p>Определяем приоритеты, инструменты и последовательность действий.</p></div></article></div></section>
+    <section id="about" class="section about"><div class="shell about__grid"><div class="about__mark" aria-hidden="true">M</div><div><p class="eyebrow">О МУСТАФЕ</p><h2>MUSTAFA<br><em>эксперт по биохакингу</em></h2><p>Биохакинг — это не стремление принимать как можно больше добавок. Это системный подход, в котором сон, питание, нагрузка, восстановление, привычки и дополнительные инструменты работают на одну задачу — внимательнее относиться к своему состоянию и выстраивать образ жизни под собственные цели.</p><p>Не копировать чужую схему. Не собирать десятки продуктов без понимания зачем. Сначала разобраться в контексте. Потом определить приоритеты. И только затем выбирать инструменты.</p><a class="button button--primary" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Написать Мустафе ↗</a></div></div></section>
 
-    <section class="section mentorship reveal"><div class="mentorship__glow"></div><div><p class="eyebrow">PRIVATE FORMAT</p><h2>Персональное <em>сопровождение</em></h2><p>Для тех, кому недостаточно одного разбора и нужна более системная работа: последовательно внедрять изменения, сохранять фокус и корректировать подход по мере движения.</p></div><a class="button button--secondary" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Обсудить сопровождение <span>↗</span></a></section>
-
-    <section class="section products">
-      <div class="section-head reveal"><p class="eyebrow">PERSONAL STACK</p><h2>Инструменты под конкретные цели</h2><p>Продукты рассматриваются как часть общей системы, а не как универсальное решение для каждого.</p></div>
-      <div class="products__layout">
-        <div class="product-grid product-grid--visual">
-          <article class="reveal product-category product-category--visual">
-            <div class="product-category__head"><span>01</span><h3>Сон и восстановление</h3></div>
-            <div class="product-list product-list--cards">
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/magnesium-glycinate.webp" loading="lazy" alt="Магний глицинат Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Магний глицинат</strong><small>Биодоступная форма магния, которую можно рассматривать как часть вечернего стека, рутин восстановления и персонального подбора.</small></div>
-              </article>
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/glycine.webp" loading="lazy" alt="Глицин Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Глицин</strong><small>Аминокислота в порошковой форме, которая может входить в индивидуальные подборки в зависимости от целей и общего контекста человека.</small></div>
-              </article>
-            </div>
-            <a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Подобрать в Telegram →</a>
-          </article>
-
-          <article class="reveal product-category product-category--visual">
-            <div class="product-category__head"><span>02</span><h3>Энергия и ресурс</h3></div>
-            <div class="product-list product-list--cards">
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/creatine.webp" loading="lazy" alt="Креатин моногидрат Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Креатин моногидрат</strong><small>Один из базовых продуктов спортивного рациона; может рассматриваться при задачах, связанных с нагрузкой, силой и восстановлением.</small></div>
-              </article>
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/taurine.webp" loading="lazy" alt="Таурин Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Таурин</strong><small>Аминокислотное соединение, которое может включаться в персональный stack в зависимости от уровня нагрузки и общего запроса.</small></div>
-              </article>
-            </div>
-            <a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Подобрать в Telegram →</a>
-          </article>
-
-          <article class="reveal product-category product-category--visual">
-            <div class="product-category__head"><span>03</span><h3>Фокус и продуктивность</h3></div>
-            <div class="product-list product-list--cards">
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/magnesium-threonate.webp" loading="lazy" alt="Магний L-треонат Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Магний L‑треонат</strong><small>Форма магния, которую можно рассматривать в подборках для людей с высокой интеллектуальной нагрузкой и задачами на фокус.</small></div>
-              </article>
-            </div>
-            <a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Подобрать в Telegram →</a>
-          </article>
-
-          <article class="reveal product-category product-category--visual">
-            <div class="product-category__head"><span>04</span><h3>Стресс и адаптация</h3></div>
-            <div class="product-list product-list--cards">
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/ashwagandha.webp" loading="lazy" alt="Ашваганда Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Ашваганда</strong><small>Растительный экстракт, который может рассматриваться как часть индивидуальных подборок для людей с высокой нагрузкой и напряжённым ритмом.</small></div>
-              </article>
-            </div>
-            <a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Подобрать в Telegram →</a>
-          </article>
-
-          <article class="reveal product-category product-category--visual">
-            <div class="product-category__head"><span>05</span><h3>Витамины и минералы</h3></div>
-            <div class="product-list product-list--cards">
-              <article class="product-item product-item--card">
-                <div class="product-thumb product-thumb--hero"><img src="assets/images/products/zinc-selen.webp" loading="lazy" alt="Цинк и селен Triple H" width="360" height="360"></div>
-                <div class="product-copy"><strong>Цинк + Селен</strong><small>Комплекс минералов, который может входить в персональные подборки в зависимости от целей, рациона и общего контекста.</small></div>
-              </article>
-            </div>
-            <a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Подобрать в Telegram →</a>
-          </article>
-        </div>
-        <button class="mobile-more-toggle" type="button" aria-expanded="false">Показать остальные направления</button>
-        <div class="products__art reveal">
-          <div class="integrated-media integrated-media--stack" aria-hidden="true">
-            <div class="integrated-media__glow"></div>
-            <img class="integrated-media__video integrated-media__image section-motion" src="assets/images/product-tools-transparent.webp" alt="" width="480" height="480" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-      <p class="product-disclaimer reveal">Подборка показана для наглядности. Конкретный состав, формат применения и выбор продуктов определяются индивидуально — с учётом цели, образа жизни и общего контекста человека.</p>
-    </section>
-
-    <section class="section case"><p class="eyebrow reveal">CASE / CLIENT</p><div class="case__grid"><div class="reveal"><h2>Системный подход <em>вместо отдельных решений</em></h2><p class="quote">«Не один продукт, а последовательная система действий вокруг сна, питания, активности и восстановления.»</p></div><div class="case__details"><article class="reveal"><small>Запрос</small><p>Низкий уровень энергии, сложности с восстановлением, нестабильный режим сна и ощущение истощённости.</p></article><article class="reveal"><small>В работе</small><p>Режим сна, питание, физическая активность, восстановление, ежедневные привычки и персональная система действий.</p></article><article class="reveal"><small>Подход</small><p>Работа строилась вокруг последовательных изменений, а не обещаний эффекта от одного продукта.</p></article></div></div></section>
-
-    <section id="about" class="section about"><div class="about__mark" aria-hidden="true">M</div><div class="reveal"><p class="eyebrow">ABOUT</p><h2><span class="brand-heading">MUSTAFA</span><br><em>эксперт по биохакингу</em></h2><p>Биохакинг — это не стремление принимать как можно больше добавок. Это системный подход, в котором сон, питание, нагрузка, восстановление, привычки и дополнительные инструменты работают на одну задачу — внимательнее относиться к своему состоянию и выстраивать образ жизни под собственные цели.</p><p>Не копировать чужую схему. Не собирать десятки продуктов без понимания зачем. Сначала разобраться в контексте. Потом определить приоритеты. И только затем выбирать инструменты.</p><a class="button button--primary" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Написать Мустафе в Telegram <span>↗</span></a></div></section>
-
-    <section id="faq" class="section faq"><div class="section-head reveal"><p class="eyebrow">FAQ</p><h2>Частые вопросы</h2></div><div class="faq-list reveal"><details><summary>Это медицинская консультация?<span>+</span></summary><p>Нет. Материалы сайта и биохакинг-разбор не заменяют консультацию врача, медицинскую диагностику или лечение.</p></details><details><summary>Можно ли получить только бесплатный подбор?<span>+</span></summary><p>Да. Если ваша задача — подобрать продукты под конкретную цель, можно оставить запрос без персонального разбора.</p></details><details><summary>Чем бесплатный подбор отличается от персонального разбора?<span>+</span></summary><p>Бесплатный подбор сфокусирован на выборе продуктов под конкретный запрос. Персональный разбор предполагает более широкий взгляд на образ жизни, режим, нагрузку, привычки и цели.</p></details><details><summary>Обязательно ли покупать продукты?<span>+</span></summary><p>Нет. Сначала рассматривается ваш запрос и определяется дальнейшее направление.</p></details><details><summary>Можно обратиться, если я уже принимаю добавки?<span>+</span></summary><p>Да. Укажите их в анкете, чтобы специалист видел общий контекст.</p></details><details><summary>Что делать, если у меня есть заболевание или я принимаю лекарства?<span>+</span></summary><p>Вы можете оставить запрос, однако вопросы диагностики, лечения и совместимости с назначенной терапией необходимо обсуждать с врачом.</p></details><details><summary>Можно ли работать онлайн?<span>+</span></summary><p>Да. Взаимодействие может проходить дистанционно.</p></details><details><summary>Можно ли заказать продукты в другую страну?<span>+</span></summary><p>Возможность доставки зависит от страны и конкретного продукта и уточняется отдельно.</p></details><button class="mobile-more-toggle" type="button" aria-expanded="false">Показать все вопросы</button></div></section>
-
-    <section class="section final"><div class="final__orb"></div><p class="eyebrow reveal">START HERE</p><h2 class="reveal">Не знаете,<br><em>с чего начать?</em></h2><p class="reveal">Есть конкретная цель — начните с бесплатного подбора. Хотите посмотреть на ситуацию комплексно — запросите персональный биохакинг-разбор.</p><div class="actions reveal"><a class="button button--primary" href="#selection">Бесплатный подбор ↓</a><a class="button button--secondary" href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Персональный разбор ↗</a></div></section>
+    <section id="faq" class="section faq"><div class="shell faq__grid"><div class="section-head"><p class="eyebrow">FAQ</p><h2>Частые вопросы</h2></div><div class="faq-list">
+      <details><summary>Это медицинская консультация?<span>+</span></summary><p>Нет. Материалы сайта и биохакинг-разбор не заменяют консультацию врача, медицинскую диагностику или лечение.</p></details>
+      <details><summary>Можно ли получить только бесплатный подбор?<span>+</span></summary><p>Да. Если ваша задача — подобрать продукты под конкретную цель, можно оставить запрос без персонального разбора.</p></details>
+      <details><summary>Чем бесплатный подбор отличается от персонального разбора?<span>+</span></summary><p>Бесплатный подбор сфокусирован на выборе продуктов под конкретный запрос. Персональный разбор предполагает более широкий взгляд на образ жизни, режим, нагрузку, привычки и цели.</p></details>
+      <details><summary>Обязательно ли покупать продукты?<span>+</span></summary><p>Нет. Сначала рассматривается ваш запрос и определяется дальнейшее направление.</p></details>
+      <details><summary>Можно обратиться, если я уже принимаю добавки?<span>+</span></summary><p>Да. Укажите их в анкете, чтобы специалист видел общий контекст.</p></details>
+      <details><summary>Что делать, если у меня есть заболевание или я принимаю лекарства?<span>+</span></summary><p>Вы можете оставить запрос, однако вопросы диагностики, лечения и совместимости с назначенной терапией необходимо обсуждать с врачом.</p></details>
+      <details><summary>Можно ли работать онлайн?<span>+</span></summary><p>Да. Взаимодействие может проходить дистанционно.</p></details>
+      <details><summary>Можно ли заказать продукты в другую страну?<span>+</span></summary><p>Возможность доставки зависит от страны и конкретного продукта и уточняется отдельно.</p></details>
+    </div></div></section>
   </main>
-
-  <footer class="footer"><div><a class="brand footer-brand" href="#top">MUSTAFA <span>PERSONAL BIOHACKING</span></a><p>Персональный подход к состоянию, привычкам и целям.</p></div><div class="footer__links"><a href="#goals">Направления</a><a href="#selection">Подбор</a><a href="#review">Разбор</a><a href="#about">О Мустафе</a><a href="#faq">FAQ</a><a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Telegram @Must1ofa1 ↗</a></div><div class="footer__links"><a href="privacy.html">Конфиденциальность</a><a href="consent.html">Согласие на обработку данных</a><a href="terms.html">Информация и ограничения</a></div><p class="footer__legal">Материалы сайта носят информационно-образовательный характер и не предназначены для самостоятельной диагностики или лечения заболеваний. Информация не заменяет консультацию врача. При заболеваниях, выраженных симптомах, беременности или приёме лекарственных средств необходимо консультироваться с профильным медицинским специалистом.</p><p class="footer__copy">© 2026 MUSTAFA</p></footer>
-</body></html>
+  <footer class="footer"><div class="shell footer__grid"><div><a class="brand" href="#top">MUSTAFA</a><p>Персональный подход к состоянию, привычкам и целям.</p></div><div class="footer__links"><a href="#system">Подход</a><a href="#goals">Направления</a><a href="#selection">Подбор</a><a href="#process">Процесс</a><a href="#about">О Мустафе</a><a href="#faq">FAQ</a></div><div class="footer__links"><a href="https://t.me/Must1ofa1" target="_blank" rel="noopener noreferrer">Telegram @Must1ofa1 ↗</a><a href="privacy.html">Конфиденциальность</a><a href="consent.html">Согласие на обработку данных</a><a href="terms.html">Информация и ограничения</a></div><p class="footer__legal">Материалы сайта носят информационно-образовательный характер и не предназначены для самостоятельной диагностики или лечения заболеваний. Информация не заменяет консультацию врача.</p><p class="footer__copy">© 2026 MUSTAFA</p></div></footer>
+</body>
+</html>

@@ -25,7 +25,7 @@ python3 -m http.server 8000
 
 - `index.html` — структура и тексты сайта.
 - `styles.css` — вся визуальная система, адаптив и анимации.
-- `app.js` — интро, mobile menu, reveal-анимации, движение DNA и Telegram-форма.
+- `app.js` — интро, мобильное меню, лёгкое движение DNA и Telegram-форма.
 - `assets/images/` — предоставленные DNA, brain и capsules visuals.
 - `privacy.html` — шаблон политики конфиденциальности.
 - `consent.html` — шаблон согласия на обработку данных.
