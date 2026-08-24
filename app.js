@@ -16,6 +16,7 @@
   const intro = document.getElementById('intro');
   const skipIntro = document.getElementById('skipIntro');
   const hasSeenIntro = sessionStorage.getItem('mustafa-intro-seen-v4') === '1';
+  const compactViewport = window.matchMedia('(max-width: 760px)').matches;
 
   const closeIntro = () => {
     if (!intro) return;
@@ -23,7 +24,7 @@
     sessionStorage.setItem('mustafa-intro-seen-v4', '1');
   };
 
-  if (reduceMotion || hasSeenIntro) {
+  if (reduceMotion || hasSeenIntro || compactViewport) {
     intro?.classList.add('is-hidden');
   } else {
     window.setTimeout(closeIntro, 3000);
@@ -38,6 +39,17 @@
     menu.setAttribute('aria-expanded', String(open));
   });
   nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('nav--open'); menu?.setAttribute('aria-expanded','false'); }));
+
+  document.querySelectorAll('.mobile-more-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const section = button.closest('section');
+      const expanded = section?.classList.toggle('mobile-expanded') || false;
+      button.setAttribute('aria-expanded', String(expanded));
+      button.textContent = expanded ? 'Свернуть' : (button.dataset.closedLabel || button.textContent);
+      if (!button.dataset.closedLabel && !expanded) button.dataset.closedLabel = button.textContent;
+    });
+    button.dataset.closedLabel = button.textContent;
+  });
 
   const heroVisual = document.getElementById('heroVisual');
   const reveals = document.querySelectorAll('.reveal');
